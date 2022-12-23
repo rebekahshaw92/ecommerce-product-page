@@ -1,0 +1,314 @@
+$paleOrange: hsl(25, 100%, 94%);
+$lightGrayishBlue: hsl(223, 64%, 98%);
+$orange: hsl(26, 100%, 55%);
+$white: hsl(0, 0%, 100%);
+
+.sliderImage {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        width: 57%;
+        margin: 5%;
+        margin-left: 20%;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+}
+
+.sliderImageModal {
+    @include media-breakpoint-up(lg) {
+       width: 57%;
+        margin: 5%;
+        margin-left: 20%;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+}
+
+.slider, .mySlider {
+ max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.next {
+    right: 5% !important;
+}
+
+.previous {
+    left: 5% !important;
+}
+
+.previousImage, .nextImage {
+    stroke: black;
+}
+
+.previousImageModal:hover, .nextImageModal:hover {
+    stroke: $orange;
+}
+
+.previousImage:hover, .nextImage:hover {
+    stroke: $orange;
+}
+
+
+
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    margin-top: -25px;
+    background: $white;
+    border-radius: 1rem;
+ @include media-breakpoint-up(lg) {
+        display: none;
+     }
+}
+
+.previousModal {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    padding: 10px;
+    margin-top: -25px;
+    background: $white;
+    border-radius: 50%;
+    margin-left: 30% !important;
+}
+
+
+.nextModal {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    padding: 10px;
+    margin-top: -25px;
+    border-radius: 50%;
+    background: $white;
+    margin-left: 65% !important;
+}
+
+
+.percent {
+    background-color: $paleOrange;
+    padding: 0.4rem 0.8rem;
+
+}
+
+.priceText {
+    display: flex;
+    flex-direction: column;
+}
+
+.amountText {
+    margin: 5%;
+    background-color: $lightGrayishBlue;
+    @include media-breakpoint-up(lg) {
+       width: 100%;
+    }
+}
+
+#minus, #plus {
+    margin: 5%;
+    padding-top: 15%;
+    cursor: pointer;
+ }
+
+ #addCart {
+    //width: 100%;
+    padding: 1.5rem 6rem;
+    box-shadow: 1px 1rem 1.5rem rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    font-size: 1.5rem;
+    color: $white;
+    background-color: $orange;
+    border: none;
+    border-radius: 1rem;
+    gap: 1rem;
+    margin: auto;
+    &:hover {
+        background-color: rgba(255, 125, 26, 0.7);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+    }
+ }
+
+ .checkout {
+    width: 93%;
+    padding: 1rem 1rem;
+    box-shadow: 1px 1rem 1.5rem rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    font-size: 1.2rem;
+    color: $white;
+    background-color: $orange;
+    border: none;
+    border-radius: 1rem;
+    gap: 1rem;
+    margin: auto;
+    &:hover {
+        background-color: rgba(255, 125, 26, 0.7);
+    }
+ }
+
+ .cartBtn {
+    width: 1.8rem;
+    fill: $white;
+    width: 1.8rem;
+   
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#overlay-cart {
+    position: absolute;
+    width: 26rem;
+    height: 16rem;
+    background-color: $white;
+    top: 4rem;
+   right: 1rem;
+   z-index: 100;
+   // border-radius: 1rem;
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.15);
+   //opacity: 0;
+}
+
+.add-cart {
+    margin-right: 20px;
+}
+
+.cartThumbnail {
+    margin: 10%;
+    width: 100%;
+}
+
+#cartInfo {
+   margin-left: 5%;
+}
+
+.deleteIcon {
+    margin: 5% !important;
+    cursor: pointer;
+}
+
+.avatar {
+    cursor: pointer;
+    &:hover {
+        border-radius: 50%;
+        border: 2px solid $orange;
+    }
+}
+
+.maiinInfo {
+    @include media-breakpoint-up(lg) {
+    margin-left: -50%;
+    margin-top: 5%;
+    width: 120%;
+    }
+}
+
+#amountText {
+    margin-top:5%;
+}
+
+.sliderImageThumbnail { 
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: block;
+       // height: 9rem;
+        width: 82%;
+        border-radius: 1rem;
+        cursor: pointer;
+       // margin-left: -50%;
+    }
+}
+
+.sliderImageThumbnailModal {
+    @include media-breakpoint-up(lg) {
+       // height: 9rem;
+       // width: 60px;
+       width: 5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+       //margin-left: 10%;
+    }
+}
+
+.desktopSlider {
+    @include media-breakpoint-up(lg) {
+        margin-left: 24% !important;
+    }
+}
+
+.active-small {
+    border: 5px solid $orange;
+    opacity: 0.4;
+  }
+
+  .mainModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
+  .modal-content {    
+     position: relative;
+     margin: auto;
+     padding: 0;
+    width: 90%;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+.slider-delete {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+  #cross-icon {
+    fill: $white !important;
+    //top: -8%;
+    position: absolute;
+    &:hover {
+        fill: $orange !important;
+    }
+  }
+
+.close {
+  position: absolute;
+  z-index: 999;
+  right: 27rem; 
+  //top: 3rem;
+}
+
+.modalSlider {
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        gap: 2.5rem !important;
+        margin-left: 32%;
+    }
+}
+
+.active-small-modal {
+    // filter: brightness(120%);
+    border: 3px solid $orange;
+    opacity: 0.5;
+}

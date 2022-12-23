@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$font: 'Kumbh Sans', sans-serif;
+$veryDarkBlue: hsl(220, 13%, 13%);
+$orange: hsl(26, 100%, 55%);
+$grayishBlue: hsl(220, 14%, 75%);
+$darkGrayishBlue: hsl(219, 9%, 45%);
+
+
+body {
+    font-family: $font;
+}
+
+.nav-item {
+    margin-left: 8%;
+    font-weight: 700;
+    color: $veryDarkBlue;
+    font-size: 1.4rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+        margin-left: 4%;
+        color: $darkGrayishBlue;
+    }
+
+}
+
+.firstChild {
+    margin-top: 5%;
+    @include media-breakpoint-up(lg) {
+        margin-top: 0;
+    }
+}
+
+.sneakers {
+    margin: 5%;
+    margin-top: 7%;
+    color: $orange;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    @include media-breakpoint-up(lg){
+        margin-top: 20%;
+    }
+   
+}
+
+.fall {
+    margin-left: 5%;
+    font-weight: 700;
+    color: $veryDarkBlue;
+    font-size: 2rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
+    }
+}
+
+.mainText {
+    margin: 5%;
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+    color: $darkGrayishBlue;
+    //font-weight: 700;
+}
+
+.price {
+    margin-left: 15%;
+    font-weight: 700;
+    color: $veryDarkBlue;
+    font-size: 2rem;
+    @include media-breakpoint-up(lg) {
+        margin-left: 20%;
+    }
+}
+
+.percent {
+    color: $orange;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-left: 2%;
+//     padding-top: 10% !important;
+ }
+
+ .oldPrice {
+    color: $darkGrayishBlue;
+    font-size: 1.2rem;
+    margin-top: 10%;
+    @include media-breakpoint-up(lg) {
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+ }
+
+ #amount {
+    color: $darkGrayishBlue;
+    font-weight: 700;
+    margin-top: 5%;
+    font-size: 1.5rem;
+ }
+
+ .cartTitle {
+    color: $darkGrayishBlue;
+    margin: 6%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 2px solid rgba(182, 188, 200, 0.25);
+ }
+
+ #product-number {
+    // position: absolute;
+    // border-radius: 50%;
+    font-size: 0.8rem;
+     right: 40px;
+     top: -4px;
+    background-color: $orange;
+    // color: #fff;
+    // padding: 1px 5px;
+ }
+
+ .priceInfo {
+    font-size: 1.2rem;
+ }
+
+ .cartPrice {
+    font-size: 1.2rem;
+    margin-top: -5%;
+    color: $darkGrayishBlue;
+ }
+
+ #total {
+    font-weight: 700;
+    color: $veryDarkBlue;
+    margin-left: 2%;
+ }
